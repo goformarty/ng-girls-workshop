@@ -3,11 +3,12 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'todo-item',
   template: `
-    {{ itemTitle }}
+    {{ todoItem.title }}
   `,
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
+  @Input() todoItem: any;
   @Input() itemTitle: string;
   constructor() { }
 
