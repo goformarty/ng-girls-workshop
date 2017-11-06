@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   <h1>
     {{ title }}
   </h1>
-  <todo-input></todo-input>
+  <todo-input (submit)="addItem($event)"></todo-input>
   <ul>
     <li *ngFor="let item of todoList">
       <todo-item [todoItem]="item">
@@ -27,4 +27,8 @@ export class AppComponent {
     {title: 'develop app'},
     {title: 'deploy app'},
   ];
+
+  addItem(title: string): void {
+    this.todoList.push({ title });
+  }
 }
