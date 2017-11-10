@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'todo-root',
+  selector: 'app-root',
   template: `
-  <todo-list-manager></todo-list-manager>
+    <todo-list-manager></todo-list-manager>
   `,
   styleUrls: ['./app.component.css']
 })
