@@ -16,7 +16,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class InputComponent implements OnInit {
 
   @Output() submit: EventEmitter<string> = new EventEmitter();
-  title: string;
+  title = '';
 
   constructor() {
     this.changeTitle('I love Angular');
@@ -27,5 +27,4 @@ export class InputComponent implements OnInit {
   changeTitle(newTitle: string): void {
     this.submit.emit(newTitle);
   }
-
 }
